@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #151414;
+  margin: 0;
+  padding: 0;
+  color: #f1f1f1;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 360px;
+}
+
+.roblox-logo {
+  width: 130px;
+  margin-bottom: 20px;
+  filter: brightness(90%);
+}
+
+.login-box {
+  background: #2c2c2c;
+  padding: 30px;
+  width: 100%;
+  border: 1px solid #444;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.login-box input::placeholder {
+  color: #999;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background-color: #cc3737;
+}
+
+.forgot {
+  display: block;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10px;
+  color: #aaaaaa;
+  text-decoration: none;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 12px;
+  color: #888;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 40%;
+  top: 50%;
+  background: #555;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.device-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #3d3d3d;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+
+.device-btn:hover {
+  background-color: #4c4c4c;
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 10px;
+  color: #cccccc;
+}
+
+.signup-text a {
+  color: #4f94ff;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #ff7070;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer {
+  font-size: 10px;
+  color: gray;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+/* Responsive tweaks for small devices */
+@media (max-width: 480px) {
+  .roblox-logo {
+    width: 100px;
+  }
+
+  .login-header {
+    font-size: 18px;
+  }
+
+  .login-box input,
+  .login-btn,
+  .device-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .divider {
+    font-size: 11px;
+  }
+
+  .forgot,
+  .signup-text {
+    font-size: 12px;
+  }
+}

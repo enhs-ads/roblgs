@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #eaeaeafc;
+  padding: 0.3rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar h1, .navbar a {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar img {
+  width: 35px;
+}
+
+.navbar button, .navbar a.button {
+  background-color: #2e50e9;
+  color: white;
+  border: 1px solid #aaa9a9;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.search-container {
+  margin-left: auto;
+}
+
+.search-container input {
+  width: 180px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.profile-container {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.avatar {
+  width: 130px;
+  border-radius: 10px;
+}
+
+.display-name {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+
+.username, .join-date {
+  color: #333;
+  font-size: 14px;
+}
+
+button {
+  margin: 0.3rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #aaa;
+}
+
+img.responsive-img {
+  width: 90%;
+  max-width: 500px;
+  margin: 1.5rem auto;
+  display: block;
+  cursor: pointer;
+}
+
+footer {
+  font-size: 10px;
+  color: gray;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 1rem;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .search-container {
+    order: 10;
+    width: 100%;
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .search-container input {
+    width: 90%;
+  }
+
+  .navbar h1 {
+    font-size: 12px;
+  }
+
+  .navbar button {
+    font-size: 12px;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .display-name {
+    font-size: 1.4rem;
+  }
+
+  .username, .join-date {
+    font-size: 12px;
+  }
+}
