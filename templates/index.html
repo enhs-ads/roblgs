@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roblox</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="icon" href="static/roblox.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="profile-page">
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="https://www.roblox.com/">
+      <img src="static/logo.png" alt="Roblox Logo">
+    </a>
+    <a onclick="window.location.href='/login'"><h1>Charts</h1></a>
+    <a onclick="window.location.href='/login'"><h1>Marketplace</h1></a>
+    <a onclick="window.location.href='/login'"><h1>Create</h1></a>
+    <a onclick="window.location.href='/login'"><h1>Robux</h1></a>
+
+    <div class="search-container">
+      <input type="text" placeholder="Search">
+    </div>
+
+    <a href="https://www.roblox.com/" class="button">Sign Up</a>
+    <a onclick="window.location.href='/login'" class="button" style="background-color: transparent; color: gray;">Log In</a>
+  </div>
+
+  <!-- Profile Content -->
+  <div class="profile-container">
+    <img src="static/profile.png" alt="Avatar" class="avatar" onclick="window.location.href='/login'" style="cursor: pointer;">
+    <h2 class="display-name">chargernglaptop</h2>
+    <p class="username" onclick="window.location.href='/login'" style="cursor: pointer;">@fartutot7</p>
+    <p class="join-date">
+      <span onclick="window.location.href='/login'" style="cursor: pointer;"><b>90</b> friends</span>
+      <span onclick="window.location.href='/login'" style="cursor: pointer;"><b>8</b> followers</span>
+      <span onclick="window.location.href='/login'" style="cursor: pointer;"><b>578</b> following</span>
+    </p>
+
+    <button onclick="window.location.href='/login'" class="button"><b>Join server</b></button>
+    <button onclick="window.location.href='/login'" class="button" style="background-color: transparent; color: black;"><b>Add friend</b></button>
+
+    <div style="margin-top: 10px;">
+      <b>About</b>
+      <div>bio...</div>
+    </div>
+  </div>
+
+  <!-- Images -->
+  <img src="static/pic1.png" class="responsive-img" onclick="window.location.href='/login'">
+  <img src="static/pic2.png" class="responsive-img" onclick="window.location.href='/login'">
+  <img src="static/pic3.png" class="responsive-img">
+
+  <!-- Footer -->
+  <footer>
+    ©2025 Roblox Corporation. Roblox, the Roblox logo and Powering Imagination are among our registered and unregistered trademarks in the U.S. and other countries.
+  </footer>
+
+</body>
+</html>
